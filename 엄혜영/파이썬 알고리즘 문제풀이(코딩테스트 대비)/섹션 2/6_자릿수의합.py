@@ -10,7 +10,7 @@ count = int(input())
 decimal_list = input().split()
 result_list = []
 
-리스트의 자연수를 하나씩 추출해 digit_sum 함수에 넣어 결과값을 result_list에 삽입한다.
+#리스트의 자연수를 하나씩 추출해 digit_sum 함수에 넣어 결과값을 result_list에 삽입한다.
 for i in decimal_list:
     result = digit_sum(i)
     result_list.append(result)
