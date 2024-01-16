@@ -1,0 +1,8 @@
+SELECT  DISTINCT USER_ID, PRODUCT_ID
+FROM    ONLINE_SALE os1
+WHERE   EXISTS(SELECT   *
+                FROM    ONLINE_SALE os2
+                WHERE   os1.ONLINE_SALE_ID != os2.ONLINE_SALE_ID AND
+                        os1.USER_ID = os2.USER_ID AND
+                        os1.PRODUCT_ID = os2.PRODUCT_ID)
+ORDER BY USER_ID, PRODUCT_ID DESC;
